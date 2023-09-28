@@ -7,6 +7,8 @@ const  expressLayouts = require('express-ejs-layouts');
 
 //configure
 dotenv.config();
+//database
+const dbConnect = require('./database/dbConnect')
 
 // server port
 const port = process.env.port;
@@ -29,6 +31,7 @@ const startServer = ()=>{
     try {
         app.listen(port,()=>{
             console.log(`server runing on http://localhost:${port}`)
+            dbConnect.authenticate();
         })
         
     } catch (e) {

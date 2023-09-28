@@ -1,6 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const userRoute = require('./routes/userRoute')
+const userRoute = require('./routes/userRoute');
+const ejs = require('ejs');
+const  expressLayouts = require('express-ejs-layouts');
+
 
 //configure
 dotenv.config();
@@ -10,6 +13,11 @@ const port = process.env.port;
 
 //creating server
 const app = express();
+
+//setting view
+app.set('view engine','ejs');
+app.use(expressLayouts);
+
 
 app.use('/',userRoute)
 

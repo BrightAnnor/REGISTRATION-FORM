@@ -1,7 +1,16 @@
+
 const home = (req,res)=>{
-    res.send('hello')
+    res.send('welcome page')
 };
+const signUp = (req,res)=>{
+    res.send('signup page')
+};
+const signIn = (req,res)=>{
+    res.send('signIn page')
+}
 
 module.exports = {
-    home
+    home,
+    signUp,
+    signIn
 }

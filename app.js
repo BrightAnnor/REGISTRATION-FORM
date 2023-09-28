@@ -8,7 +8,8 @@ const  expressLayouts = require('express-ejs-layouts');
 //configure
 dotenv.config();
 //database
-const dbConnect = require('./database/dbConnect')
+const dbConnect = require('./database/dbConnect');
+const User = require('./database/models/user')
 
 // server port
 const port = process.env.port;

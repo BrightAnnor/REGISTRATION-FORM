@@ -1,12 +1,12 @@
 
 const home = (req,res)=>{
-    res.send('welcome page')
+    res.render('pages/index')
 };
 const signUp = (req,res)=>{
-    res.send('signup page')
+    res.render('pages/signup')
 };
 const signIn = (req,res)=>{
-    res.send('signIn page')
+    res.render('pages/signin')
 }
 
 module.exports = {

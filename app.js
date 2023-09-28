@@ -9,13 +9,25 @@ const  expressLayouts = require('express-ejs-layouts');
 dotenv.config();
 //database
 const dbConnect = require('./database/dbConnect');
-const User = require('./database/models/user')
+const User = require('./database/models/user');
+const expressSession =require('express-session');
+const session =require('express-session');
 
 // server port
 const port = process.env.port;
+//api credentials
+const API_SECRET = process.env.API_SECRET
 
 //creating server
 const app = express();
+
+//middleware for sessions
+app.use(session({
+    secret: API_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {}
+  }))
 
 //setting view
 app.set('view engine','ejs');

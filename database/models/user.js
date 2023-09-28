@@ -20,7 +20,7 @@ const User = dbConnect.define('user',{
         type:DataTypes.STRING,
         allowNull:false
     },
-    class:{
+    Class:{
         type:DataTypes.STRING,
         allowNull:false
     },

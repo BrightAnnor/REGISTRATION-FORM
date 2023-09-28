@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const userRoute = require('./routes/userRoute')
 
 //configure
 dotenv.config();
@@ -9,6 +10,8 @@ const port = process.env.port;
 
 //creating server
 const app = express();
+
+app.use('/',userRoute)
 
 
 
@@ -24,4 +27,4 @@ const startServer = ()=>{
         
     }
 }
-startServer()
+startServer();

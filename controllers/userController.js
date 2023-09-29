@@ -31,6 +31,7 @@ const signUpUser = async (req,res)=>{
 
            
     } catch (error) {
+        // res.send(error)
         res.send('unable to handle request')
         
     }

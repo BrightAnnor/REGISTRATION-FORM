@@ -6,7 +6,9 @@ const bcrypt = require('bcrypt');
 const welcome = (req,res)=>{
     res.render('pages/welcome')
 }
-const home = (req,res)=>{
+const home = async(req,res)=>{
+    // const userID = req.session.user
+    // const userInfo = await User.findAll({where:{id:userID}})
     res.render('pages/index')
 };
 const signUp = (req,res)=>{

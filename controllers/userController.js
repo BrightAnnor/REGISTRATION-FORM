@@ -3,6 +3,9 @@
 const User = require("../database/models/user");
 const bcrypt = require('bcrypt');
 
+const welcome = (req,res)=>{
+    res.render('pages/welcome')
+}
 const home = (req,res)=>{
     res.render('pages/index')
 };
@@ -57,7 +60,7 @@ const signInUser = async(req,res)=>{
 
             req.session.user = result.id
 
-            res.send('Login Successfully')
+            res.render('pages/index')
 
             console.log(req.session);
 
@@ -68,6 +71,7 @@ const signInUser = async(req,res)=>{
 }
 
 module.exports = {
+    welcome,
     home,
     signUp,
     signIn,

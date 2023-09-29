@@ -6,9 +6,7 @@ const bcrypt = require('bcrypt');
 const welcome = (req,res)=>{
     res.render('pages/welcome')
 }
-const home = async(req,res)=>{
-    // const userID = req.session.user
-    // const userInfo = await User.findAll({where:{id:userID}})
+const home = (req,res)=>{ 
     res.render('pages/index')
 };
 const signUp = (req,res)=>{
@@ -62,7 +60,9 @@ const signInUser = async(req,res)=>{
 
             req.session.user = result.id
 
-            res.render('pages/index')
+              const userID = req.session.user
+    const userInfo = await User.findOne({where:{id:userID}})
+            res.render('pages/index',{userInfo})
 
             console.log(req.session);
 

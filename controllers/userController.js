@@ -26,7 +26,7 @@ const signUpUser = async (req,res)=>{
 
             // res.send(result)
             if(result) 
-            return res.send('created successfully')}
+            return res.render('pages/userCreatedLogin')}
         else
             
             res.send('kindly try again')

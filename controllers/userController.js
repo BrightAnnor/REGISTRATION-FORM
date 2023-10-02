@@ -26,7 +26,7 @@ const signUpUser = async (req,res)=>{
 
             // res.send(result)
             if(result) 
-            return res.render('pages/userCreatedLogin')}
+            return res.redirect('signIn')}
         else
             
             res.send('kindly try again')

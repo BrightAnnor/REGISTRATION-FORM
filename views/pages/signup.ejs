@@ -6,19 +6,19 @@
                 <h2 class="title">Registration Info/signUp</h2>
                 <form method="post" action="/signUp">
                     <div class="input-group">
-                        <input class="input--style-2" type="text" placeholder="Name" name="fullName" id="fullName">
+                        <input class="input--style-2" type="text" placeholder="Name" name="fullName" id="fullName" required>
                     </div>
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
-                                <input class="input--style-2 js-datepicker" type="text" placeholder="Birthdate" name="birthDate" id="birthDate">
+                                <input class="input--style-2 js-datepicker" type="text" placeholder="Birthdate" name="birthDate" id="birthDate" required>
                                 <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="gender">
+                                    <select name="gender" required>
                                         <option disabled="disabled" selected="selected">Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="Class" id="Class">
+                            <select name="Class" id="Class" required>
                                 <option disabled="disabled" selected="selected">Class</option>
                                 <option>Class 1</option>
                                 <option>Class 2</option>
@@ -43,14 +43,14 @@
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Password" name="password" id="password">
+                                <input class="input--style-2" type="text" placeholder="Password" name="password" id="password" required>
                             </div>
                         </div>
                     </div>
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Confirm Password" name="confirm_password" id="confirm_password">
+                                <input class="input--style-2" type="text" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
